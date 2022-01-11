@@ -1,0 +1,14 @@
+[Unit]
+Description=MidiConnect service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u midi-connect.py
+WorkingDirectory=/home/pi/
+StandardOutput=tty
+StandardError=tty
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
